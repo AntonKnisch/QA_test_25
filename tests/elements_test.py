@@ -1,9 +1,19 @@
 import time
+from pages.elements_page import TexBoxPage
 
-from pages.base_page import BasePage
+class TestElements:
+    class TestTextBox:
 
 
-def test(driver):
-    page = BasePage(driver,'https://petfriends.skillfactory.ru/my_pets')
-    page.open()
-    time.sleep(3)
+        def test_text_box(self , driver):
+            text_box_page = TextBoxPage(driver, 'https://petfriends.skillfactory.ru/login')
+
+            text_box_page.open()
+            text_box_page.SUBMIT_IF_HAVE.click()
+            text_box_page.fill_all_fields()
+            time.sleep(5)
+
+# def test(driver):
+#     page = BasePage(driver,'https://petfriends.skillfactory.ru/login')
+#     page.open()
+#     time.sleep(3)
