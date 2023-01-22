@@ -1,15 +1,12 @@
 import time
-from pages.elements_page import TexBoxPage
+from pages.elements_page import TextBoxPage
 
 class TestElements:
     class TestTextBox:
-
-
         def test_text_box(self , driver):
             text_box_page = TextBoxPage(driver, 'https://petfriends.skillfactory.ru/login')
-
             text_box_page.open()
-            text_box_page.SUBMIT_IF_HAVE.click()
+            # text_box_page.SUBMIT_IF_HAVE.click()
             text_box_page.fill_all_fields()
             time.sleep(5)
 
