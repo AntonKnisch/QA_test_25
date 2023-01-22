@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 class TextBoxPageLocators:
 
     # FULL_NAME = (By.CSS_SELECTOR,"input[id='userName']")
-    EMAIL= (By.ID ,"#email")
+    EMAIL= (By.ID ,"input#email")
     FULL_PASSWORD = (By.CSS_SELECTOR,"#pass")
     # CURRENT_ADDRESS = (By.CSS_SELECTOR,"input[id='currentAddress']")
     # PERMAMENT_ADDRESS = (By.CSS_SELECTOR,"input[id='permamentAddress']")
