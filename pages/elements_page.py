@@ -1,6 +1,6 @@
 import time
 
-from locators.elements_page_locaror import TextBoxPageLocators
+from locators.elements_page_locator import TextBoxPageLocators
 from pages.base_page import BasePage
 
 
