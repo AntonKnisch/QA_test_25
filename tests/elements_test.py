@@ -10,6 +10,12 @@ class TestElements:
             text_box_page.fill_all_fields()
             time.sleep(5)
 
+        def test_my_pets(self, driver):
+            my_pets = TextBoxPage (driver , 'https://petfriends.skillfactory.ru/my_pets')
+            my_pets.open()
+            my_pets.go_to_my_pets()
+            time.sleep(5)
+
 # def test(driver):
 #     page = BasePage(driver,'https://petfriends.skillfactory.ru/login')
 #     page.open()

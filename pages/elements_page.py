@@ -17,3 +17,7 @@ class TextBoxPage(BasePage):
         self.element_is_visible(self.locators.SUBMIT).click()
         # self.element_is_visible(self.locators.SUBMIT_IF_ALREADY_HAVE).click()
         time.sleep(5)
+
+    def go_to_my_pets(self):
+        self.element_is_present(self.locators.MY_PETS).click()
+        time.sleep(5)
