@@ -1,6 +1,7 @@
 import time
 
 from locators.elements_page_locator import TextBoxPageLocators
+from locators.elements_page_locator import MyPetsPageLocators
 from pages.base_page import BasePage
 
 
@@ -18,6 +19,19 @@ class TextBoxPage(BasePage):
         # self.element_is_visible(self.locators.SUBMIT_IF_ALREADY_HAVE).click()
         time.sleep(5)
 
-    def go_to_my_pets(self):
+    def cheсk_filled_form(self):
+        email = self.element_is_present(self.locators.EMAIL).text.split(':')[1]
+        password =  self.element_is_present(self.locators.FULL_PASSWORD).text.split(':')[1]
+        return email , password
+
+
+class MyPetsPage(BasePage):
+    locators = MyPetsPageLocators()
+    def open_my_pets(self):
         self.element_is_present(self.locators.MY_PETS).click()
-        time.sleep(5)
+
+    def click_random_checkbox(self):
+        item_list = self.element_are_visible(self.locators.MY_PETS)
+        for item in item_list:
+            self.go_to_element(item)
+            print(item.txt)
